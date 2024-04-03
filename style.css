@@ -191,12 +191,11 @@ p{
 
 .maparn{
     height: 100vh;
-    text-align: center;
     min-width: 220px;
     max-width: 100%;
-    border: 10%;
-    position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 
