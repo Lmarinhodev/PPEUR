@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -20,43 +21,23 @@
                     <i class="lni lni-grid-alt"></i>
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">Estúdio conceito</a>
+                    <a href="#">Inventário Habitação</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="index.html" class="sidebar-link">
+                    <a href="index.php" class="sidebar-link">
                         <i class="lni lni-home"></i>
-                        <span>Home</span>
+                        <span>Inventário Habitação</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="#resumo" class="sidebar-link">
                         <i class="lni lni-agenda"></i>
-                        <span>Resumo</span>
+                        <span>Sobre o inventário</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                        <i class="lni lni-map"></i>
-                        <span>Regiões</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Região Administrativa Oeste</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Região Administrativa Sul</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Região Administrativa Norte</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Demais municípios</a>
-                        </li>
-                    </ul>
-                </li>
+
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
@@ -67,20 +48,17 @@
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                                Porte médio
+                                Natal
                             </a>
                             <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
                                 <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Açu</a>
+                                    <a href="#uf_24" class="sidebar-link">Região Administrativa Norte</a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Caicó</a>
+                                    <a href="#uf_24" class="sidebar-link">Região Administrativa Oeste</a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Currais Novos</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Mossoró</a>
+                                    <a href="#uf_24" class="sidebar-link">Região Administrativa Sul</a>
                                 </li>
                             </ul>
                             <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
@@ -90,21 +68,32 @@
                         </li>
                     </ul>
                 </li>
+                <li class="sidebar-item">
+                    <a href="cadastro.php" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Cadastro</span>
+                    </a>
+                </li>
             </ul>
         </aside>
 
         <div class="main p-3">
             <div class="logo2">
+                <img src="assets/CNPq_v2017_rgb.png" class="log1">
                 <img src="assets/logotipo_sem-legenda.png" class="log1">
                 <img src="assets/IPP.png" class="log2">
                 <img src="assets/logo.png" class="log3">
-                <img src="assets/logo_ESTÚDIO CONCEITO.png" class="log4">
-            </div> 
-            <div class="maparn">
-                <img src="assets/rnpng.png" class="imag">
+                <img src="assets/logo_ESTUDIO CONCEITO.png" class="log4">
             </div>
+             
+            <div class="maparn">
+                <?php include("RN2.svg"); ?>    
+            </div>
+            
             <div class="oeste">
                 <div class="blocktxt">
+                    <!--
+                    <Section id="resumo">
                     <br>
                     <h1>Resumo</h1>
                     <p>
@@ -152,75 +141,274 @@
 
                         o planejamento das políticas públicas urbanas.
                     </p>
-                    <img src="assets/Mapatodos.jpg" class="imag">
-                    <h1>Região Administrativa Oeste </h1>
-                    <img src="assets/Oeste/Mapa Geral ZOlllllllllllllllllllll.jpg" class="imag">
-                    <h2>Sobre a região</h2>
-                    <p>
-                    A Região Administrativa Oeste de Natal foi a primeira da
-                    cidade a acolher um conjunto habitacional com mais de
-                    400 unidades construídas. Tratou-se do conjunto Cidade
-                    da Esperança, cujas primeiras 504 unidades foram
-                    construídas sob a responsabilidade do órgão antecessor
-                    da Companhia de Habitação do Rio Grande do Norte
-                    (COHAB/RN) – a Fundação de Habitação Popular
-                    (FUNDHAP) – com recursos da Agência dos Estados
-                    Unidos para o Desenvolvimento Internacional (USAID) e
-                    aprovação da Superintendência de Desenvolvimento
-                    do Nordeste (SUDENE). As demais unidades já ficaram a
-                    cargo da COHAB/RN, vinculada ao Banco Nacional da
-                    Habitação (BNH). Essa região também recebeu o primeiro
-                    programa do BNH voltado para atender população
-                    removida de favelas, trata-se do Promorar. Esse programa
-                    iniciou sua atuação em Natal — e também no país, aliás
-                    — com a entrega do conjunto Santa Esmeralda (1980), no
-                    bairro do Bom Pastor. Outro Promorar construído pela
-                    COHAB/RN nessa região foi o conjunto Felipe Camarão
-                    (1982).
-                    </p>
-                    <h1>Localização do conjunto</h1>
-                    <p>Com um projeto concebido pelo arquiteto Ubirajara Galvão, o Cidade da Esperança
-                        foi dotado de um partido urbanístico desenvolvido pelo
-                        arquiteto Getúlio Madruga, em que a toponímia das
-                        ruas homenageia os estados (avenidas principais) e
-                        municípios (ruas adjacentes) do Brasil. Foram disponibilizadas
-                        áreas para a construção de equipamentos de uso coletivo
-                        e de uso exclusivo para o comércio e a indústria (na
-                        avenida Rio Grande do Sul). Nesse conjunto foi construído o
-                        primeiro Centro Social Urbano (CSU) do Brasil (Tribuna do
-                        Norte, 11 de março de 1977). O Cidade da Esperança deu
-                        nome ao bairro em que está localizado, que foi oficializado
-                        pelo Decreto-Lei no 1.643, de 9 de junho de 1967, na
-                        administração do então Prefeito Agnelo Alves. O bairro teve
-                        seus limites redefinidos através da Lei no. 4.330, de 5 de abril
-                        de 1993, oficializada quando da sua publicação no Diário Oficial
-                        do Estado em 7 de setembro de 1994 (NATAL, 2008).</p>
-                    <img src="assets/Oeste/Mapa de Localização.jpg" class="imag">
-                    <p>
-                        A designação Cidade da Esperança já tinha sido utilizada por Aluízio Alves em outros momentos: primeiro, em referência à cidade de Natal,
-                        durante a campanha para o governo (Tribuna do Norte, 15 de junho de 1961, p. 1); depois, num projeto apresentado em um dos seus discursos,
-                        referente a uma cidade voltada para as crianças — com administração e todo o gerenciamento feito pelos menores (Tribuna do Norte, 16 de
-                        junho de 1961, p. 1). Na primeira etapa, previa-se a construção de casas tipo embrião, que poderiam ser ampliadas. Eram duas as tipologias
-                        habitacionais: o tipo A, com 42 m2 de área coberta — tendo sala, cozinha, banheiro, terraço e dois quartos, aos quais se podia adicionar mais
-                        um — e o tipo B, com 36 m2 de área coberta — sala, cozinha, banheiro, terraço e um quarto, podendo ser adicionados mais dois (Tribuna do
-                        Norte, 1964, p. 5). O lote dos imóveis tinha dimensão de 9x20 metros.
-                        A designação Cidade da Esperança já tinha sido utilizada por Aluízio Alves em outros momentos: primeiro, em referência à cidade de Natal,
-                        durante a campanha para o governo (Tribuna do Norte, 15 de junho de 1961, p. 1); depois, num projeto apresentado em um dos seus discursos,
-                        referente a uma cidade voltada para as crianças — com administração e todo o gerenciamento feito pelos menores (Tribuna do Norte, 16 de
-                        junho de 1961, p. 1). Na primeira etapa, previa-se a construção de casas tipo embrião, que poderiam ser ampliadas. Eram duas as tipologias
-                        habitacionais: o tipo A, com 42 m2 de área coberta — tendo sala, cozinha, banheiro, terraço e dois quartos, aos quais se podia adicionar mais
-                        um — e o tipo B, com 36 m2 de área coberta — sala, cozinha, banheiro, terraço e um quarto, podendo ser adicionados mais dois (Tribuna do
-                        Norte, 1964, p. 5). O lote dos imóveis tinha dimensão de 9x20 metros.
-                    </p>
+                    </Section>
+                    -->
+                    <br>
+                    <br>
+                    <main class="table" id="customers_table">
+                        <section class="table__header">
+                            <h1>Pesquisar por ...</h1>
+                            <div class="input-group">
+                                <input type="search" placeholder="Search Data...">
+                                <img src="images/search.png" alt="">
+                            </div>
+                            <div class="export__file">
+                                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                                <input type="checkbox" id="export-file">
+                                <div class="export__file-options">
+                                    <label>Export As &nbsp; &#10140;</label>
+                                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="table__body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th> UF <span class="icon-arrow">&UpArrow;</span></th>
+                                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
+                                        <th> Location <span class="icon-arrow">&UpArrow;</span></th>
+                                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                                        <th> Amount <span class="icon-arrow">&UpArrow;</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 1 </td>
+                                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="">Zinzu Chan Lee</td>
+                                        <td> Seoul </td>
+                                        <td> 17 Dec, 2022 </td>
+                                        <td>
+                                            <p class="status delivered">Delivered</p>
+                                        </td>
+                                        <td> <strong> $128.90 </strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td> 2 </td>
+                                        <td><img src="images/Jeet Saru.png" alt=""> Jeet Saru </td>
+                                        <td> Kathmandu </td>
+                                        <td> 27 Aug, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$5350.50</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 3</td>
+                                        <td><img src="images/Sonal Gharti.jpg" alt=""> Sonal Gharti </td>
+                                        <td> Tokyo </td>
+                                        <td> 14 Mar, 2023 </td>
+                                        <td>
+                                            <p class="status shipped">Shipped</p>
+                                        </td>
+                                        <td> <strong>$210.40</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 4</td>
+                                        <td><img src="images/Alson GC.jpg" alt=""> Alson GC </td>
+                                        <td> New Delhi </td>
+                                        <td> 25 May, 2023 </td>
+                                        <td>
+                                            <p class="status delivered">Delivered</p>
+                                        </td>
+                                        <td> <strong>$149.70</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 5</td>
+                                        <td><img src="images/Sarita Limbu.jpg" alt=""> Sarita Limbu </td>
+                                        <td> Paris </td>
+                                        <td> 23 Apr, 2023 </td>
+                                        <td>
+                                            <p class="status pending">Pending</p>
+                                        </td>
+                                        <td> <strong>$399.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 6</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alex Gonley </td>
+                                        <td> London </td>
+                                        <td> 23 Apr, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$399.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 7</td>
+                                        <td><img src="images/Alson GC.jpg" alt=""> Jeet Saru </td>
+                                        <td> New York </td>
+                                        <td> 20 May, 2023 </td>
+                                        <td>
+                                            <p class="status delivered">Delivered</p>
+                                        </td>
+                                        <td> <strong>$399.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 8</td>
+                                        <td><img src="images/Sarita Limbu.jpg" alt=""> Aayat Ali Khan </td>
+                                        <td> Islamabad </td>
+                                        <td> 30 Feb, 2023 </td>
+                                        <td>
+                                            <p class="status pending">Pending</p>
+                                        </td>
+                                        <td> <strong>$149.70</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                                        <td> Dhaka </td>
+                                        <td> 22 Dec, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$249.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                                        <td> Dhaka </td>
+                                        <td> 22 Dec, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$249.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                                        <td> Dhaka </td>
+                                        <td> 22 Dec, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$249.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                                        <td> Dhaka </td>
+                                        <td> 22 Dec, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$249.99</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                                        <td> Dhaka </td>
+                                        <td> 22 Dec, 2023 </td>
+                                        <td>
+                                            <p class="status cancelled">Cancelled</p>
+                                        </td>
+                                        <td> <strong>$249.99</strong> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </main>
+                    
+                    
+
+                    <!--
+                    <div class="RAOeste">
+                            <h1>Ficha dos municípios</h1>
+                            <style>
+                                .search-container {
+                                display: flex;
+                                margin-top: 50px;
+                            }
+                            .search-box {
+                                width: 300px;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                            }
+                            .search-button {
+                                padding: 10px 20px;
+                                border: none;
+                                background-color: #12054e;
+                                color: white;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                margin-left: 10px;
+                            }
+                            .search-button:hover {
+                                background-color: #4545a0;
+                            }
+                            </style>
+                            <div class="search-container">
+                                <form action="">
+                                    <input name="busca" class="search-box" type="text" placeholder="Digite sua pesquisa...">
+                                    <button class="search-button" type="submit">Pesquisar</button>
+                                </form>
+                            </div>
+                                <table class="table table-striped table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+                                    <thead>
+                                        <th>Cidade</th>
+                                        <th>Bairro</th>
+                                        <th>Conjunto</th>
+                                        <th>Etapa</th>
+                                        <th>Cartografia</th>
+                                        <th>Notícias</th>
+                                        <th>Ficha técnica</th>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                        $pesquisa = $_GET['busca'];
+                                        $sql_code = "SELECT * FROM ficha WHERE id LIKE '%$pesquisa%' OR conjunto LIKE '%$pesquisa%'";
+                                        $sql_query = $mysqli->query($sql_code) or die("ERROR AO CONSULTAR" . $mysqli->error);
+                                        while($arquivo = $sql_query->fetch_assoc()){
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $arquivo['conjunto']; ?></td>
+                                        <td><?php echo $arquivo['conjunto']; ?></td>
+                                        <td><?php echo $arquivo['conjunto']; ?></td>
+                                        <td><?php echo $arquivo['conjunto']; ?></td>
+                                        <td><img width="175" src="<?php echo $arquivo['cartografia_path']?>" alt=""></td>
+                                        <td><img width="175" src="<?php echo $arquivo['cartografia_path']?>" alt=""></td>
+                                        <td><img width="175" src="<?php echo $arquivo['cartografia_path']?>" alt=""></td>
+                                    </tr>
+                                    <?php    
+                                    }
+                                    ?>                           
+                                    </tbody>
+                                </table>  
+                                <dialog>
+                                <h2>Ficha Catalográfica</h2>
+                                    <table border="1" padding="10">
+                                        <tr>
+                                            <th>Ano</th>
+                                            <th>Unidades</th>
+                                            <th>População Estimada</th>
+                                            <th>Arquiteto</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1982</td>
+                                            <td>458</td>
+                                            <td>2061</td>
+                                            <td>EQUIPE TÉCNICA COHAB/RN (FELIPE CAMARÃO I) JGESY (FELIPE CAMARÃO II) A CARLOS PRADO (FELIPE CAMARÃO III)</td>
+                                        </tr>
+                                    </table>
+                                    <button>Fechar</button>
+                                </dialog>
+                                
+                    </div>
+                    -->
 
                 </div>
+
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
