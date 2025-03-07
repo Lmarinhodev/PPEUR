@@ -16,15 +16,20 @@ li {
 }
 body {
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+    mapadding: 0;
+    margin: 0;
+    border: 0;
 }
 
 .wrapper {
     display: flex;
+    min-width: 100%;
 }
 
 .main {
     min-height: 100vh;
-    max-width: 100%;
+    min-width: 100%;
     overflow-x: hidden;
     transition: all 0.35s ease-in-out;
     background-color:#f2f2f2;
@@ -182,25 +187,21 @@ html {
 
 }
 
-.oeste{
+.centro{
     margin-top: -100px;
     height: auto;
     width: 104%;
-    margin-left: -2%;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     border-top: 500px;
     overflow-x: hidden;
     padding: 10px;
-}
-
-.blocktxt{
-    max-width: 85%;
+    padding-left: 80px;
+    max-width: 100%;
     min-width: 150px;
     margin: auto;
-    padding: 0%;
-    text-align: center;
-    margin-left: 150px;   
+    text-align: center; 
 }
+
 
 .imag{
     min-width: 50px;
@@ -213,13 +214,6 @@ p{
     color: #03002b;
 }
 
-.RAOeste{
-    width: auto;
-    max-width: 104%;
-    text-align: left;
-
-}
-
 .container{
     width: auto;
     overflow-y: hidden;
@@ -230,6 +224,7 @@ p{
     margin: auto;
     text-align: center;
     margin-top: -150px;
+    width: 100%;
 }
 
 .search-container{
@@ -237,7 +232,8 @@ p{
 }
 
 SVG {
-    width: 78%;
+    width: 80%;
+    margin-top: 6%;
 }
 
 svg path {
@@ -269,10 +265,10 @@ svg path:hover{
  }
 }
 
-/*@page {
+@page {
     size: landscape;
     margin: 0; 
-}*/
+}
 
 body {
     min-height: 100vh;
@@ -283,8 +279,8 @@ body {
 }
 
 main.table {
-    width: 82vw;
-    height: 90vh;
+    min-width: 80vw;
+    height: 85vh;
     background-color: #fff5;
 
     backdrop-filter: blur(7px);
@@ -375,7 +371,6 @@ td img {
     width: 36px;
     height: 36px;
     margin-right: .5rem;
-    border-radius: 50%;
 
     vertical-align: middle;
 }
@@ -572,3 +567,42 @@ thead th.active,tbody td.active {
 .export__file .export__file-options img{
     width: 2rem;
     height: auto;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #12054e;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.search-button:hover {
+    background-color: #4545a0;
+}
+
+.barradepes{
+    width: 100%;
+    align-items: center;
+}
+
+input.barradepesq{
+    min-width: 350px; 
+}
+
+.btn-ficha {
+    padding: .4rem 0; 
+    border-radius: 2rem; 
+    text-align: center; 
+    background-color: #86e49d; 
+    color: #006b21; 
+    border: none; 
+    font-size: 14px; 
+    cursor: pointer; 
+    width: 100%; 
+}
+
+.btn-ficha:hover {
+    background-color: #69c27f; 
+}
