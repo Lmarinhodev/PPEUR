@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="arquivos/resumo.pdf" class="sidebar-link">
+                    <a href="#" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#ex1">
                         <i class="lni lni-agenda"></i>
                         <span>Sobre o inventário</span>
                     </a>
@@ -54,7 +54,6 @@
             </div>
             
             <div class="centro">
-                    <script src="script_table.js"></script>
                     <br>
                     <br>
                     <main class="table" id="customers_table">
@@ -79,7 +78,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+				<!-- tabela (MOVER SCRIPT PARA ONDE ESTÁ)-->                                  
                                 </tbody>
                             </table>
                     </main>
@@ -87,9 +86,71 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+   <!-- Modal do Bootstrap pdf (ADD)-->
+   <div class="modal fade" id="ex1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="modalPdf">Visualizar</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+     <iframe 
+       id="pdfViewer"
+       src="arquivos/resumo.pdf" 
+       style="width:100%; height:700px; border:none;" 
+       allow="fullscreen"
+     ></iframe>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- Modal de cadastro (ADD)-->
+   <div class="modal fade" id="ex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="cadastroInventario">Cadastro</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+		<form class="px-4 py-3">
+			<label class="form-label d-block" for="ufChoice">Escolha a UF</label>
+			<select class="form-select d-block mb-3"  id="ufChoice" name="UF"> 
+				<option value="RN">RN</option>
+			</select>
+			<label class="form-label d-block" for="municipioChoice">Escolha o município</label>
+			<select class="form-select d-block mb-3" id="municipioChoice" name="Município"> 
+				<option value="Natal">Natal</option>
+			</select>
+			<label class="form-label d-block" for="conjuntoChoice" >Escolha o conjunto</label>
+			<select  class="form-select d-block mb-3" id="conjuntoChoice" name="Conjunto"> 
+				<option value="Natal">Cidade da Esperança</option>
+			</select>
+			<label class="form-label d-block" for="imageInput" >Acrescente uma imagem</label>
+			<input class="form-control d-block mb-3"  id="imageInput" type="file"> 
+			<label class="form-label d-block" for="imageInput" >Acrescente um mapa</label>
+			<input class="form-control d-block mb-3"  id="mapInput" type="file"> 
+			<label class="form-label d-block" for="imageInput" >Acrescente um arquivo de informações</label>
+			<input class="form-control d-block mb-3"  id="pdfInput" type="file"> 
+		
+		</form>
+        </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+   <script src="script.js"></script>
+   <script src="script_table.js"></script>
 </body>
 </html>
