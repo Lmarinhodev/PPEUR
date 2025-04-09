@@ -237,13 +237,13 @@ SVG {
 }
 
 svg path {
-    fill: #00394f;
+    fill: grey;
     stroke: #eee;
     stroke-width: .25;
 }
 
 svg path:hover{
-    fill: #006284;
+    fill:  #666666;
     transition: 0.6s;
     cursor: pointer;
 }

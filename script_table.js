@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadInitialData() {
         
         const dummyData = [
-            ["RN", "Natal", "Cidade da Esperança", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"window.location.href='arquivos/RAO/conjunto cidade da esperança.pdf'\">Ficha</button>"],
+            ["RN", "Natal", "Cidade da Esperança", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"openModal('arquivos/RAO/conjunto cidade da esperança.pdf')\">Ficha</button>"],
             ["RN", "Natal", "Promorar Santa Esmeralda", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"window.location.href='arquivos/RAO/conjunto santa esmeralda.pdf'\">Ficha</button>"],
             ["RN", "Natal", "Promorar Felipe Camarão I, II, III", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"window.location.href='arquivos/RAO/conjunto felipe camarao.pdf'\">Ficha</button>"],
             ["RN", "Natal", "Lagoa Nova I", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"window.location.href='arquivos/RAS/lagoa nova.pdf'\">Ficha</button>"],
@@ -49,12 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
             ["RN", "Santa Cruz", "Aluízio Bezerra", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/imagem.png\" alt=\"\"></a>", "<a href=\"arquivos/resumo.pdf\"><img src=\"assets/mapa.png\" alt=\"\"></a>", "<button class=\"btn-ficha\" onclick=\"window.location.href='arquivos/DM/santa cruz.pdf'\">Ficha</button>"]
 
         ]     
+
+	const municipios = [...new Set(dummyData.map(item => item[1]))];
+	municipios.map(setMunicipioColor)
+
         // Popula tabela
         tableBody.innerHTML = dummyData.map(row => `
             <tr>
-                ${row.map(cell => `<td>${cell}</td>`).join('')}
-            </tr>
-        `).join('');
+                ${row.map((cell, index)=> { 
+                	return `<td>${cell}</td>`
+                }).join('')}
+            </tr>`).join('');
 
         // Salva cópia original dos dados
         originalRows = Array.from(tableBody.querySelectorAll('tr'));
@@ -116,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     }
-    
+
     document.querySelectorAll('svg a').forEach(area => {
         const title = area.getAttribute('xlink:title');
         area.addEventListener('click', (e) => {

@@ -1,3 +1,26 @@
+function setMunicipioColor(nomeMunicipio){
+	const xlinkNS = 'http://www.w3.org/1999/xlink';
+	const anchors = document.getElementsByTagName('a');
+
+	for(let anchor of anchors) {
+	  if(anchor.getAttributeNS(xlinkNS, 'title') === nomeMunicipio) {
+	    const path = anchor.querySelector('path');
+	    path.style.fill = '#00394f'; 
+
+	    anchor.addEventListener('mouseover', () => {
+                path.style.fill = '#006687'; // Cor altera no hover
+            });
+
+            // Efeito hover (mouse sai)
+            anchor.addEventListener('mouseout', () => {
+                path.style.fill = '#00394f'; // Volta para a cor original
+            });
+	    break;
+	  }
+	}
+}
+
+
 // Hamburger Menu (correto)
 const hamBurger = document.querySelector(".toggle-btn");
 hamBurger.addEventListener("click", function () {
